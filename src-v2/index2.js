@@ -51,6 +51,7 @@ function updateDOM() {
 window.onload = function() {
     let plusIcon = document.querySelector('.todo-new .add');
     let input = document.querySelector('.todo-new .input');
+    
     input.onkeyup = function(e) {
         if (e.key === "Enter"){
             plusIcon.onclick();
@@ -59,10 +60,12 @@ window.onload = function() {
 
     plusIcon.onclick = function () {
         let itemTitle = input.value;
-        input.value = ' ';
+        input.value = '';
         
         let todoItem = { title: itemTitle, checked: false };
-        todoItems.push(todoItem);
+        if (itemTitle !== "") {
+            todoItems.push(todoItem);
+        }
         updateDOM();
     };
 
