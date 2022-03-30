@@ -48,10 +48,11 @@ function updateDOM() {
         todoList.appendChild(todoItem);
     }
 }
+
 window.onload = function() {
     let plusIcon = document.querySelector('.todo-new .add');
     let input = document.querySelector('.todo-new .input');
-    
+
     input.onkeydown = function(e) {
         if (e.key === "Enter"){
             plusIcon.onclick();
