@@ -52,7 +52,7 @@ window.onload = function() {
     let plusIcon = document.querySelector('.todo-new .add');
     let input = document.querySelector('.todo-new .input');
     
-    input.onkeyup = function(e) {
+    input.onkeydown = function(e) {
         if (e.key === "Enter"){
             plusIcon.onclick();
         }
