@@ -20,7 +20,7 @@ function updateDOM() {
                 if (item.checked) {
                     status.className = status.className + ' checked';
                 }
-            
+
                 let icon = document.createElement('div');
                 icon.className = 'icon';
                 status.appendChild(icon);
@@ -51,13 +51,13 @@ function updateDOM() {
 }
 
 window.onload = function() {
-    let button = document.querySelector('.todo-new .add');
+    let plusIcon = document.querySelector('.todo-new .add');
     let input = document.querySelector('.todo-new .input');
 
-    button.onclick = function () {
+    plusIcon.onclick = function () {
         let itemTitle = input.value;
-        input.value = '';
-
+        input.value = ' ';
+        
         let todoItem = { title: itemTitle, checked: false };
         todoItems.push(todoItem);
         updateDOM();

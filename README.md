@@ -10,5 +10,6 @@
 
 ## Mockup
 
-![](./mockup.dio.svg)
+[link](./mockup.dio.svg)
+![adding text](./mockup.dio.svg)
 
