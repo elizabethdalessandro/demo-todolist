@@ -11,7 +11,6 @@ function updateDOM() {
     todoList.innerHTML = '';
 
     
-    
     for (let item of todoItems) {
         
         let todoItem = document.createElement('div');
@@ -23,8 +22,7 @@ function updateDOM() {
                 status.className = 'status';
                 if (item.checked) {
                     status.className = status.className + ' checked';
-                    doneTasks++;
-                }
+                };
                 
                 let icon = document.createElement('i');
                 icon.className = 'fa fa-check';
@@ -55,6 +53,25 @@ function updateDOM() {
         todoList.appendChild(todoItem);
 
     }
+    let invent = document.getElementsByClassName("status checked").length;
+    console.log(invent);
+
+
+    document.getElementById("w-done").innerText = "";
+    document.getElementById("accomp").innerText = "";
+    document.getElementById("done-tasks").innerText = "";
+    document.getElementById("already").innerText = "";
+    document.getElementById("k-going").innerText = "";
+    if (invent > 0){
+        document.getElementById("w-done").innerText = "Well done";
+        document.getElementById("accomp").innerText = "You have accomplished";
+        document.getElementById("done-tasks").innerText = invent;
+        document.getElementById("already").innerText = "tasks already";
+        document.getElementById("k-going").innerText = "Keep going!";
+        if(invent == 1){
+            document.getElementById("already").innerText = "task already";
+        };
+    };
 }
 
 
@@ -72,6 +89,9 @@ window.onload = function() {
         }
     }
 
+    let invent = document.getElementsByClassName("status checked").length;
+    console.log(invent);
+
     plusIcon.onclick = function () {
         let itemTitle = input.value;
         input.value = '';
@@ -81,9 +101,7 @@ window.onload = function() {
             todoItems.push(todoItem);
         }
         updateDOM();
-    };
-
- 
+    }
 
 
     updateDOM();
