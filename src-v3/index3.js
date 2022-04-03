@@ -3,6 +3,7 @@ let todoItems = [
     { title: 'Water the plant', checked: true },
     */
 ];
+let doneTasks = 0;
 
 
 function updateDOM() {
@@ -22,7 +23,7 @@ function updateDOM() {
                 status.className = 'status';
                 if (item.checked) {
                     status.className = status.className + ' checked';
-                    doneTasks ++;
+                    doneTasks++;
                 }
                 
                 let icon = document.createElement('i');

@@ -1,39 +1,38 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800;400&display=swap');
 
 body {
     background-color: #f0f0f0;
-    padding: 10%;
+    padding: 5%;
     font-family: 'Open Sans', sans-serif;
-    font-size: medium;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font-size: 20px;
+    display:flex
+}
+
+.left-content {
+    flex-grow:1;
+}
+
+.right-content {
+    padding-left: 10%;
+    flex-grow: 7;
 }
 
 h1 {
-    font-family: 'Open Sans', sans-serif;
     font-size: 50px;
-    font-weight: 800;
+    font-weight: 800px;
     margin:-5px;
 }
 
 .content {
     background-color: #f0f0f0;
-    box-shadow: 0px 0px 20px 1px #98c1d9;
-    border-radius: 30px;
-    padding-bottom: 10px;
-    padding:10%;
-    margin-top: 60px;
-    width:fit-content;
-    
-    
+    box-shadow: 0px 0px 10px 1px #98c1d9;
+    border-radius: 10px;
+    padding:2%;
+    margin-top: 15%;
 }
 
-.done {
-    padding-left: 10%;
-    flex-grow: 1;
-}
+
 
 .todo-list-title {
     color: rgb(27, 21, 32);
@@ -108,11 +107,11 @@ h1 {
     background-color: rgb(235, 235, 235);    
     border-color: rgb(207, 207, 207);
     border-style: solid;
-    border-width: 2px; 
+    border-width: 1px; 
     padding: 5px;
     margin-right: 10px;
     flex-grow: 1;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 
