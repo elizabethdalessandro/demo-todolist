@@ -43,9 +43,8 @@ body {
 
 .todo-item .title {
     flex-grow: 1;
-    align-items: center;
-    padding: 10px;
-}
+    {
+}}
 
 .todo-item .status.checked ~ .title{
     text-decoration:line-through;
